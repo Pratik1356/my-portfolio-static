@@ -1,110 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shiburaj Pappu - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pratik Singh — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content animate__animated animate__fadeIn">
-            <div class="profile-photo">
-                <img src="shibufull.jpg" alt="Shiburaj Pappu">
-            </div>
-            <h1>Hi, I'm Shiburaj Pappu</h1>
-            <p>Associate Professor | Dean of Academics | Certified Laravel Developer | Full Stack Developer</p>
-            <a href="#contact" class="btn">Get in Touch</a>
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<nav id="nav">
+  <div class="nav-logo">pratik.singh</div>
+  <div class="nav-dots">
+    <div class="nav-dot active" data-page="p1" onclick="goTo('p1')"></div>
+    <div class="nav-dot" data-page="p2" onclick="goTo('p2')"></div>
+    <div class="nav-dot" data-page="p3" onclick="goTo('p3')"></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#p1">Home</a></li>
+    <li><a href="#p2">Work</a></li>
+    <li><a href="#p3">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE 1 — HERO -->
+<section class="page" id="p1">
+  <div class="hero-left">
+    <div class="h-eyebrow">Available for work</div>
+    <h1 class="h-name">Pratik<span>Singh</span></h1>
+    <p class="h-role">// Full-Stack Developer &amp; UI Engineer</p>
+    <p class="h-bio">I craft fast, beautiful digital products — from pixel-perfect interfaces to resilient backend systems. 5+ years turning ambitious ideas into shipped software.</p>
+    <div class="h-btns">
+      <a href="#p2" class="btn btn-fill">View Work →</a>
+      <a href="#p3" class="btn btn-outline">Say Hello</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hc">
+      <div class="hc-label">Status</div>
+      <div class="hc-status">
+        <span class="avail-dot"></span>Open to opportunities
+      </div>
+      <div class="hc-sub">Mumbai, IN · Remote OK</div>
+    </div>
+    <div class="hc">
+      <div class="hc-label">Experience</div>
+      <div class="hc-val">5+</div>
+      <div class="hc-sub">Years shipping products</div>
+    </div>
+    <div class="hc">
+      <div class="hc-label">Core Stack</div>
+      <div class="hc-stack">
+        <span class="chip chip-p">React</span>
+        <span class="chip chip-p">Next.js</span>
+        <span class="chip chip-v">Node.js</span>
+        <span class="chip chip-v">Python</span>
+        <span class="chip chip-c">AWS</span>
+        <span class="chip chip-c">PostgreSQL</span>
+        <span class="chip chip-p">TypeScript</span>
+      </div>
+    </div>
+    <div class="hc">
+      <div class="hc-label">Projects Shipped</div>
+      <div class="hc-val">30+</div>
+      <div class="hc-sub">Across startups &amp; enterprises</div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 2 — WORK + SKILLS -->
+<section class="page" id="p2">
+  <div class="p2-header reveal">
+    <h2 class="p2-title">Selected <em>Work</em></h2>
+    <span class="p2-count">06 Projects</span>
+  </div>
+
+  <div class="bento reveal">
+    <div class="bc span3 a1">
+      <div class="bc-num">001</div>
+      <div class="bc-title">Nexus Analytics Dashboard</div>
+      <div class="bc-desc">Real-time data platform processing millions of events with sub-second latency. Built for enterprise scale.</div>
+      <div class="bc-tech">
+        <span class="bc-tag">React</span>
+        <span class="bc-tag">Node.js</span>
+        <span class="bc-tag">ClickHouse</span>
+        <span class="bc-tag">Redis</span>
+      </div>
+    </div>
+    <div class="bc span3 a2">
+      <div class="bc-num">002</div>
+      <div class="bc-title">Aurelius — AI Writing Tool</div>
+      <div class="bc-desc">AI writing assistant with fine-tuned LLMs helping teams produce consistent content at scale.</div>
+      <div class="bc-tech">
+        <span class="bc-tag">Next.js</span>
+        <span class="bc-tag">OpenAI</span>
+        <span class="bc-tag">Supabase</span>
+      </div>
+    </div>
+    <div class="bc span2 a3">
+      <div class="bc-num">003</div>
+      <div class="bc-title">Verdant App</div>
+      <div class="bc-desc">Carbon footprint tracker. 10K+ downloads week 1.</div>
+      <div class="bc-tech">
+        <span class="bc-tag">React Native</span>
+        <span class="bc-tag">AWS</span>
+      </div>
+    </div>
+    <div class="bc span2 a4">
+      <div class="bc-num">004</div>
+      <div class="bc-title">Orbit Design System</div>
+      <div class="bc-desc">80+ components across 5 products.</div>
+      <div class="bc-tech">
+        <span class="bc-tag">React</span>
+        <span class="bc-tag">Figma</span>
+      </div>
+    </div>
+    <div class="bc span2 a5">
+      <div class="bc-num">005</div>
+      <div class="bc-title">Mesh Collab</div>
+      <div class="bc-desc">Live multiplayer editing for creative teams.</div>
+      <div class="bc-tech">
+        <span class="bc-tag">WebSockets</span>
+        <span class="bc-tag">Redis</span>
+      </div>
+    </div>
+    <div class="bc span4 a6">
+      <div class="bc-num">006</div>
+      <div class="bc-title">Halcyon E-Commerce Platform</div>
+      <div class="bc-desc">High-performance storefront with custom CMS. Checkout conversion 40% above industry average. 100K+ monthly transactions.</div>
+      <div class="bc-tech">
+        <span class="bc-tag">Next.js</span>
+        <span class="bc-tag">Stripe</span>
+        <span class="bc-tag">PostgreSQL</span>
+        <span class="bc-tag">CDN</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills-strip reveal">
+    <div class="sk">
+      <div class="sk-icon">⬡</div>
+      <div class="sk-name">Frontend</div>
+      <div class="sk-tags">React · Next.js · TypeScript<br>Tailwind · Framer Motion</div>
+    </div>
+    <div class="sk">
+      <div class="sk-icon">◈</div>
+      <div class="sk-name">Backend</div>
+      <div class="sk-tags">Node.js · Python · FastAPI<br>PostgreSQL · Redis · GraphQL</div>
+    </div>
+    <div class="sk">
+      <div class="sk-icon">▲</div>
+      <div class="sk-name">Cloud &amp; DevOps</div>
+      <div class="sk-tags">AWS · Docker · Kubernetes<br>CI/CD · Terraform</div>
+    </div>
+    <div class="sk">
+      <div class="sk-icon">✦</div>
+      <div class="sk-name">AI / Design</div>
+      <div class="sk-tags">LLMs · LangChain · RAG<br>Figma · Design Systems</div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 3 — ABOUT + CONTACT -->
+<section class="page" id="p3">
+  <div class="p3-left reveal">
+    <div class="p3-tag">About me</div>
+    <h2 class="p3-head">Building with<br><em>purpose</em> &amp; craft</h2>
+    <div class="p3-bio">
+      <p>Hi, I'm Pratik — a full-stack engineer who cares deeply about the details. Great software is invisible: it just works, and it feels right.</p>
+      <p>5 years across startups and enterprises, shipping products from zero to scale. Engineering rigor + design sensibility, always.</p>
+    </div>
+    <div class="exp-list">
+      <div class="exp-item">
+        <div class="exp-yr">2022 – Now</div>
+        <div>
+          <div class="exp-role">Senior Full-Stack Engineer</div>
+          <div class="exp-co">TechNova Inc.</div>
+          <div class="exp-desc">Scaled platform from 1K → 50K users. Architected microservices &amp; real-time engine.</div>
         </div>
-    </section>
-
-    <section id="about" class="about">
-        <h2 class="animate__animated animate__fadeIn">About Me</h2>
-        <div class="about-content animate__animated animate__fadeInUp">
-            <p>
-                I was born in 1986 and hold a Master's Degree in Engineering. Currently, I am working as an Associate Professor and Dean of Academics at Rizvi College of Engineering, Bandra, Mumbai. With a passion for teaching and technology, I am also a Certified Laravel Developer and a Full Stack Developer, specializing in building modern web applications.
-            </p>
+      </div>
+      <div class="exp-item">
+        <div class="exp-yr">2020 – 2022</div>
+        <div>
+          <div class="exp-role">Frontend Engineer</div>
+          <div class="exp-co">Pixel Labs</div>
+          <div class="exp-desc">Component libraries, Core Web Vitals improved by 60%.</div>
         </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <h2 class="animate__animated animate__fadeIn">Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card animate__animated animate__fadeInLeft">
-                <i class="fas fa-code"></i>
-                <h3>Full Stack Development</h3>
-                <p>Proficient in building end-to-end web applications using Laravel, PHP, JavaScript, HTML, CSS, and MySQL.</p>
-            </div>
-            <div class="skill-card animate__animated animate__fadeInUp">
-                <i class="fas fa-chalkboard-teacher"></i>
-                <h3>Teaching & Mentoring</h3>
-                <p>Experienced in teaching engineering students and mentoring them in academic and technical projects.</p>
-            </div>
-            <div class="skill-card animate__animated animate__fadeInRight">
-                <i class="fas fa-tools"></i>
-                <h3>Laravel Development</h3>
-                <p>Certified Laravel Developer with expertise in building scalable and secure web applications.</p>
-            </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-yr">2019 – 2020</div>
+        <div>
+          <div class="exp-role">Developer Intern</div>
+          <div class="exp-co">Startbridge</div>
+          <div class="exp-desc">Shipped features that increased DAU by 25%.</div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
 
-    <section id="projects" class="projects">
-        <h2 class="animate__animated animate__fadeIn">Projects</h2>
-        <div class="project-grid">
-            <div class="project-card animate__animated animate__fadeInLeft">
-                <h3>Project 1</h3>
-                <p>Description of a web application built using Laravel and Vue.js.</p>
-            </div>
-            <div class="project-card animate__animated animate__fadeInUp">
-                <h3>Project 2</h3>
-                <p>Description of an academic management system for colleges.</p>
-            </div>
-            <div class="project-card animate__animated animate__fadeInRight">
-                <h3>Project 3</h3>
-                <p>Description of a personal portfolio website built with HTML, CSS, and JavaScript.</p>
-            </div>
-        </div>
-    </section>
+  <div class="p3-right reveal">
+    <h2 class="contact-big">Let's build<br>something <em>great</em></h2>
+    <a href="mailto:pratik@example.com" class="contact-email-link">pratik@example.com</a>
+    <p class="contact-sub">Open to full-time roles, freelance projects, and interesting collaborations. Based in Mumbai — available worldwide.</p>
+    <div class="stats-row">
+      <div class="s-stat"><div class="s-stat-n">30+</div><div class="s-stat-l">Projects</div></div>
+      <div class="s-stat"><div class="s-stat-n">12+</div><div class="s-stat-l">Clients</div></div>
+      <div class="s-stat"><div class="s-stat-n">5yr</div><div class="s-stat-l">Experience</div></div>
+    </div>
+    <div class="socials">
+      <a href="#" class="s-link">
+        <div><div class="s-name">GitHub</div><div class="s-handle">@pratiksingh</div></div>
+        <span class="s-arrow">↗</span>
+      </a>
+      <a href="#" class="s-link">
+        <div><div class="s-name">LinkedIn</div><div class="s-handle">/in/pratiksingh</div></div>
+        <span class="s-arrow">↗</span>
+      </a>
+      <a href="#" class="s-link">
+        <div><div class="s-name">Twitter / X</div><div class="s-handle">@pratiksingh</div></div>
+        <span class="s-arrow">↗</span>
+      </a>
+      <a href="#" class="s-link">
+        <div><div class="s-name">Dribbble</div><div class="s-handle">@pratiksingh</div></div>
+        <span class="s-arrow">↗</span>
+      </a>
+    </div>
+  </div>
 
-    <section id="contact" class="contact">
-        <h2 class="animate__animated animate__fadeIn">Contact Me</h2>
-        <form id="contact-form" class="animate__animated animate__fadeInUp">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+  <div class="bottom-bar">
+    <p>© 2026 Pratik Singh</p>
+    <p>Crafted with care · Mumbai, IN</p>
+  </div>
+</section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2023 Shiburaj Pappu. All rights reserved.</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
